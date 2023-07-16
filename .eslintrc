@@ -1,0 +1,17 @@
+{
+  "extends": "eslint-config-airbnb",
+  "settings": {
+    "react": {
+        "version": "999.999.999"
+    }
+  },
+  "rules": {
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-param-reassign": 0,
+    "func-names": 0,
+    "no-plusplus": 0,
+    "arrow-parens": 0,
+    "consistent-return": 0,
+    "import/no-extraneous-dependencies": 0
+  }
+}

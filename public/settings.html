@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        background-color: #fff;
+        overflow: hidden;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          filter: invert(1) hue-rotate(-180deg);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      main {
+        width: 460px;
+        margin: 0 auto;
+      }
+      ul {
+        height: 340px;
+        padding: 20px 20px 0 20px;
+        margin: 0;
+      }
+      li {
+        margin: 15px 0;
+        list-style: none;
+        padding: 0;
+        white-space: nowrap;
+      }
+      ul li:first-child {
+        margin-top: 0;
+      }
+      ul li:last-child {
+        margin-bottom: 0;
+      }
+      label span {
+        display: inline-block;
+        width: 95px;
+        font-weight: bold;
+      }
+      .advanced-button {
+        margin: -8px 0;
+      }
+      .advanced-button button {
+        margin-left: 96px;
+        border: none;
+        background: #fff;
+        color: #337ab7;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .advanced-button button:hover {
+        color: #23527c;
+      }
+      ul input, ul textarea {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 0 5px;
+        width: 320px;
+        resize: none;
+      }
+      ul input {
+        line-height: 28px;
+      }
+      ul textarea {
+        line-height: 20px;
+        height: 205px;
+      }
+      .name, .pass {
+        width: 151px;
+      }
+      label i {
+        font-style: normal;
+        font-weight: bold;
+        display: inline-block;
+        width: 10px;
+        text-align: center;
+      }
+      .proxy-port::before {
+        content: '*';
+        color: red;
+        margin-right: 3px;
+      }
+      .advanced-item {
+        display: none;
+      }
+      .footer {
+        width: 460px;
+        padding: 10px 20px 0;
+        border-top: 1px solid #ddd;
+        margin: auto;
+        text-align: right;
+        white-space: nowrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 6px 10px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+      }
+      .btn[disabled] {
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        cursor: not-allowed;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+        opacity: .65;
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        margin-left: 15px;
+      }
+      .btn-default {
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+      }
+      #toast {
+        position: fixed;
+        left: 50%;
+        top: 30px;
+        width: 320px;
+        margin-left: -160px;
+        z-index: 100000001;
+        display: none;
+        text-align: center;
+      }
+      #toast #toastContent {
+        padding: 10px 15px;
+        background: rgba(0, 0, 0, .7);
+        color: #fff;
+        border-radius: 3px;
+        font-size: 13px;
+        line-height: 18px;
+        display: inline-block;
+        text-align: left;
+      }
+      .auto-set {
+        white-space: nowrap;
+        margin-right: 45px;
+      }
+      .vertial-align input, .vertial-align em {
+        vertical-align: middle;
+        font-style: normal;
+      }
+      .use-default-storage {
+        margin-top: -5px;
+      }
+      .use-default-storage input {
+        width: auto;
+      }
+    </style>
+  </head>
+  <body style="overscroll-behavior-x: none;">
+    <main>
+      <ul>
+        <li>
+          <label>
+            <span class="proxy-port">Proxy Port:</span>
+            <input id="port" type="number" class="port" maxlength="5" placeholder="8888" />
+          </label>
+        </li>
+        <li class="advanced-item">
+          <label>
+            <span>Socks Port:</span>
+            <input id="socksPort" type="number" class="port" maxlength="5" placeholder="Start a socksv5 proxy listening on given port" />
+          </label>
+        </li>
+        <li class="advanced-item">
+          <label>
+            <span>Bound Host:</span>
+            <input id="host" class="host" maxlength="255" placeholder="Bound given IP address or Domain for the proxy" />
+          </label>
+        </li>
+        <li class="advanced-item">
+          <label>
+            <span>Proxy Auth:</span>
+            <input id="username" class="name" maxlength="16" placeholder="Username" />
+            <i>:</i>
+            <input id="password" class="pass" maxlength="16" placeholder="Password" />
+          </label>
+        </li>
+        <li class="advanced-button">
+          <button id="showAdvanced">Show Advanced &gt;&gt;</button>
+        </li>
+        <li>
+          <label>
+            <span style="vertical-align: top;">Bypass List:</span>
+            <textarea id="bypass" maxlength="2000" placeholder="Servers for which you do not want to use any proxy (separated by spaces)"></textarea>
+          </label>
+        </li>
+        <li class="use-default-storage">
+          <label class="vertial-align">
+            <span></span>
+            <input id="useDefaultStorage" type="checkbox" />
+            <em>Use whistle's default storage directory</em>
+          </label>
+        </li>
+      </ul>
+      <div class="footer">
+        <label class="vertial-align auto-set">
+          <input id="autoSetProxy" type="checkbox" />
+          <em>Set as system proxy at startup</em>
+        </label>
+        <button id="cancel" class="btn btn-default">Cancel</button>
+        <button id="apply" class="btn btn-primary">Apply</button>
+      </div>
+    </main>
+    <div id="toast">
+      <div id="toastContent"></div>
+    </div>
+    <script>
+      const { ipcRenderer } = require('electron');
+      function $(selector, all) {
+        if (typeof selector !== 'string') {
+          return selector;
+        }
+        return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+      }
+
+      function forEach(selector, cb) {
+        selector = $(selector, true);
+        if (selector.length) {
+          [].forEach.call($(selector, true), cb);
+        } else {
+          cb(selector, 0);
+        }
+      }
+
+      function on(selector, type, l) {
+        forEach(selector, function(elem) {
+          elem.addEventListener(type, l);
+        });
+      }
+
+      function show(selector) {
+        forEach(selector, function(elem) {
+          elem.style.display = 'block';
+        });
+      }
+
+      function hide(selector) {
+        forEach(selector, function(elem) {
+          elem.style.display = 'none';
+        });
+      }
+
+      const toast = $('#toast');
+      let toastTimer;
+      function showToast(msg) {
+        clearTimeout(toastTimer);
+        $('#toastContent').innerText = msg;
+        show(toast);
+        toastTimer = setTimeout(function() {
+          hide(toast);
+        }, 3000);
+      }
+
+      on('#toast', 'click', () => {
+        clearTimeout(toastTimer);
+        hide(toast);
+      });
+
+      function showAdvanced() {
+        const btn = $('#showAdvanced');
+        show('.advanced-item');
+        hide(btn);
+        $('#bypass').style.height = '93px';
+        hide(btn.parentNode);
+      }
+
+      on('#showAdvanced', 'click', showAdvanced);
+
+      function sendMsg(type, data) {
+        ipcRenderer.send(type, data);
+      }
+
+      on('#cancel', 'click', function() {
+        sendMsg('hideSettings');
+      });
+
+      const isPort = p => p > 0 && p < 65536;
+
+      ipcRenderer.on('showToast', function(_, msg) {
+        showToast(msg);
+      });
+      ipcRenderer.on('showSettings', (_, options) => {
+        if (options) {
+          $('#port').value = options.port;
+          $('#socksPort').value = options.socksPort;
+          $('#username').value = options.username;
+          $('#password').value = options.password;
+          $('#host').value = options.host;
+          $('#bypass').value = options.bypass;
+          $('#autoSetProxy').checked = options.autoSetProxy !== false;
+          $('#useDefaultStorage').checked = options.useDefaultStorage;
+          if (options.socksPort || options.host || options.username || options.password) {
+            showAdvanced();
+          }
+        }
+        foucsInput('#port');
+      });
+      const foucsInput = (selector) => {
+        selector = $(selector);
+        selector.select();
+        selector.focus();
+      };
+      on('#autoSetProxy', 'change', () => {
+        sendMsg('autoSetProxy',  $('#autoSetProxy').checked);
+      });
+      on('#apply', 'click', function() {
+        const port = $('#port').value.trim();
+        if (port && !isPort(port)) {
+          foucsInput('#port');
+          return showToast('Please input the correct port');
+        }
+        const socksPort = $('#socksPort').value.trim();
+        if (socksPort && !isPort(socksPort)) {
+          foucsInput('#socksPort');
+          return showToast('Please input the correct socks port');
+        }
+        const host = $('#host').value.trim();
+        if (/\s/.test(host)) {
+          foucsInput('#host');
+          return showToast('Bound host cannot have spaces');
+        }
+        const username = $('#username').value.trim();
+        if (/\s/.test(username)) {
+          foucsInput('#username');
+          return showToast('Username cannot have spaces');
+        }
+        const password  = $('#password').value.trim();
+        if (/\s/.test(password)) {
+          foucsInput('#password');
+          return showToast('Password cannot have spaces');
+        }
+
+        sendMsg('applySettings', {
+          port,
+          socksPort,
+          host,
+          username,
+          password,
+          bypass: $('#bypass').value.trim(),
+          autoSetProxy: $('#autoSetProxy').checked,
+          useDefaultStorage: $('#useDefaultStorage').checked,
+        });
+      });
+    </script>
+  </body>
+</html>

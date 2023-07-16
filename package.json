@@ -1,0 +1,72 @@
+{
+  "name": "Whistle",
+  "version": "1.0.0",
+  "description": "Whistle Web Debugging Proxy",
+  "main": "./lib/index.js",
+  "author": "avenwu <avwu@qq.com>",
+  "scripts": {
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "release:win": "electron-builder --win --x64 -p always",
+    "release:mac": "electron-builder --mac -p always",
+    "lint": "eslint --fix lib",
+    "lintfix": "npm run lint",
+    "start": "electron ./lib"
+  },
+  "build": {
+    "productName": "Whistle",
+    "appId": "whistle.client",
+    "asar": false,
+    "artifactName": "${productName}-v${version}-${os}-${arch}.${ext}",
+    "copyright": "avenwu",
+    "compression": "normal",
+    "extends": null,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "avwo",
+        "repo": "whistle-client",
+        "releaseType": "draft"
+      }
+    ],
+    "protocols": [{
+      "name": "whistle",
+      "schemes": ["whistle"]
+    }],
+    "mac": {
+      "icon": "public/whistle.png",
+      "target": {
+        "target": "dmg",
+        "arch": [
+          "arm64",
+          "x64"
+        ]
+      }
+    },
+    "win": {
+      "icon": "public/whistle.png",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": true,
+      "runAfterFinish": true,
+      "include": "installer.nsh"
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^25.2.0",
+    "electron-builder": "^23.6.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4"
+  },
+  "dependencies": {
+    "electron-context-menu": "^3.6.1",
+    "fs-extra": "^11.1.1",
+    "npminstall": "^7.9.0",
+    "sudo-prompt": "^9.2.1",
+    "whistle": "^2.9.54",
+    "whistle.proxyauth": "^1.1.0"
+  }
+}
