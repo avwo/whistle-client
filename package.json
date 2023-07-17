@@ -26,13 +26,18 @@
         "provider": "github",
         "owner": "avwo",
         "repo": "whistle-client",
+        "private": true,
         "releaseType": "draft"
       }
     ],
-    "protocols": [{
-      "name": "whistle",
-      "schemes": ["whistle"]
-    }],
+    "protocols": [
+      {
+        "name": "whistle",
+        "schemes": [
+          "whistle"
+        ]
+      }
+    ],
     "mac": {
       "icon": "public/whistle.png",
       "target": {
@@ -55,11 +60,14 @@
     }
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "electron": "^25.2.0",
-    "electron-builder": "^23.6.0",
-    "eslint": "^8.14.0",
-    "eslint-config-airbnb": "^19.0.4"
+    "electron": "^25.3.0",
+    "electron-builder": "^24.4.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "dependencies": {
     "electron-context-menu": "^3.6.1",

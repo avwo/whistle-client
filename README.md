@@ -14,7 +14,7 @@ Whistle 客户端是基于 [Whistle (命令行版本)](https://github.com/avwo/w
 
 # 安装或更新
 
-Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux、服务端等其它系统使用，可以用命令行版本：https://github.com/avwo/whistle。
+Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux、 Docker、服务端等其它环境使用，可以用命令行版本：https://github.com/avwo/whistle。
 
 安装和更新的方法是一样的，下面以安装过程为例：
 
@@ -37,7 +37,7 @@ Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux�
 Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同的安装包，其中：
 
 1. M1 Pro、M2 Pro 等 M1 芯片的机型下载名为 [Whistle-v版本号-mac-arm64.dmg](https://github.com/avwo/whistle-client/releases) 的最新版本号的安装包
-2. 其它 Intel 芯片机型下载载名为 [Whistle-v版本号-mac-x64.dmg](https://github.com/avwo/whistle-client/releases) 的最新版本号的安装包
+2. 其它非 M1 芯片机型下载名为 [Whistle-v版本号-mac-x64.dmg](https://github.com/avwo/whistle-client/releases) 的最新版本号的安装包
 
 下载成功点击开始安装（将 Whistle 图标拖拽到 Applications / 应用程序）：
 
@@ -52,6 +52,9 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 <img src="https://github.com/avwo/whistle/assets/11450939/a89910bd-d4d4-4ea2-9f18-5a1e44ce03a7" alt="image" width="600" />
 
 
+> 打开客户端会自动设置系统代理，第一次可能需要用户输入开机密码
+
+<img width="1080" alt="image" src="https://github.com/avwo/whistle/assets/11450939/d641af14-f933-4b8a-af45-8c69c648b799">
 
 > 一些公司的软件可能会把客户端里面引用的设置代理的 whistle 文件误认为问题软件，直接点击允许放过即可，如果还有问题可以跟公司的安全同事沟通下给软件加白
 
@@ -94,7 +97,7 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 *.cdn-apple.com *.icloud.com .icloud.com.cn *.office.com *.office.com.cn *.office365.cn *.apple.com *.mzstatic.com *.tencent.com
 ```
 
-如果还未完全解决，可以把抓包列表出现的以下有问题的请求域名填到  `Bypass List` ：
+如果还未完全解决问题，可以把抓包列表出现的以下有问题的请求域名填到  `Bypass List` ：
 
 <img width="900" alt="image" src="https://github.com/avwo/whistle/assets/11450939/513ab963-a1a3-447a-ba84-147273451f78">
 
