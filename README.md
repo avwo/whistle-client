@@ -94,7 +94,7 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 安装系统根证书，安装根证书后可能因为某些客户端不支持自定义证书导致请求失败，可以通过在  `Proxy Settings` 的 `Bypass List` 设置以下规则（空格或换行符分隔）：
 
 ``` txt
-*.cdn-apple.com *.icloud.com .icloud.com.cn *.office.com *.office.com.cn *.office365.cn *.apple.com *.mzstatic.com *.tencent.com
+*.cdn-apple.com *.icloud.com .icloud.com.cn *.office.com *.office.com.cn *.office365.cn *.apple.com *.mzstatic.com *.tencent.com *.icloud.com.cn
 ```
 
 如果还未完全解决问题，可以把抓包列表出现的以下有问题的请求域名填到  `Bypass List` ：
@@ -136,7 +136,7 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 
 在  `Proxy Settings` 的 `Bypass List` 设置以下规则：
 ``` txt
-*.cdn-apple.com *.icloud.com .icloud.com.cn *.office.com *.office.com.cn *.office365.cn *.apple.com *.mzstatic.com *.tencent.com
+*.cdn-apple.com *.icloud.com .icloud.com.cn *.office.com *.office.com.cn *.office365.cn *.apple.com *.mzstatic.com *.tencent.com *.icloud.com.cn
 ```
 
 如果还未完全解决，可以把抓包列表出现的以下有问题的请求域名填到  `Bypass List` ：
