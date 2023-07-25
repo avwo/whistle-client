@@ -26,7 +26,7 @@ Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux�
 
    <img width="360" alt="image" src="https://github.com/avwo/whistle/assets/11450939/1b496557-6d3e-4966-a8a4-bd16ed643e28">
 
-   <img src="/Users/av/Library/Application%20Support/typora-user-images/image-20230716014752395.png" alt="image-20230716014752395" width="360" />
+   <img src="https://github.com/avwo/whistle/assets/11450939/d44961bb-db5b-4ce3-ab02-56879f90f3b0" width="360" />
 
    <img width="300" alt="image" src="https://github.com/avwo/whistle/assets/11450939/7e415273-a88d-492d-80ca-1a83dfc389b6">
 
@@ -124,6 +124,12 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 打开界面左侧的 `Plugins` Tab，点击上方 `Install` 按钮，输入要安装插件的名称（多个插件用空格或换行符分隔），如果需要特殊的 npm registry 可以手动输入 `--registry=xxx` 或在对话框下方选择之前使用过的 npm registry。
 
 <img width="1080" alt="image" src="https://github.com/avwo/whistle/assets/11450939/b60498fd-4d22-4cd9-93ff-96b8ed94c30b">
+
+如输入：
+
+``` txt
+whistle.script whistle.vase --registry=https://registry.npmmirror.com
+```
 
 > 后面的版本会提供统一的插件列表页面，用户只需选择安装即可，无需手动输入插件包名
 
