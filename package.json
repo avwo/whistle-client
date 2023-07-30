@@ -1,6 +1,6 @@
 {
   "name": "Whistle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Whistle Web Debugging Proxy",
   "main": "./lib/index.js",
   "author": "avenwu <avwu@qq.com>",
@@ -26,7 +26,6 @@
         "provider": "github",
         "owner": "avwo",
         "repo": "whistle-client",
-        "private": true,
         "releaseType": "draft"
       }
     ],
@@ -74,7 +73,7 @@
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
     "sudo-prompt": "^9.2.1",
-    "whistle": "^2.9.55",
+    "whistle": "^2.9.56",
     "whistle.proxyauth": "^1.1.0"
   }
 }
