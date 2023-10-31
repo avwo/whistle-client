@@ -59,7 +59,7 @@
     }
   },
   "devDependencies": {
-    "electron": "^25.9.2",
+    "electron": "^26.4.1",
     "electron-builder": "^24.4.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -69,7 +69,6 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "dependencies": {
-    "electron": "^26.4.1",
     "electron-context-menu": "^3.6.1",
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
