@@ -1,6 +1,6 @@
 
 # v1.0.3
-1. feat: 更新 Whistle 版本 [v2.9.58](https://github.com/avwo/whistle/blob/master/CHANGELOG.md#v2957)
+1. feat: 更新 Whistle 版本 [v2.9.59](https://github.com/avwo/whistle/blob/master/CHANGELOG.md#v2959)
 2. feat: 更新 electron 版本
 3. feat: `Inspcetors/Response/Preivew` 支持直接预览
 

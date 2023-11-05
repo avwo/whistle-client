@@ -73,7 +73,7 @@
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
     "sudo-prompt": "^9.2.1",
-    "whistle": "^2.9.58",
+    "whistle": "^2.9.59",
     "whistle.proxyauth": "^1.1.1"
   }
 }
