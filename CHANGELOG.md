@@ -1,4 +1,8 @@
 
+# v1.0.6
+# v1.0.5
+# v1.0.4
+1. feat: update whistle
 # v1.0.3
 1. feat: 更新 Whistle 版本 [v2.9.59](https://github.com/avwo/whistle/blob/master/CHANGELOG.md#v2959)
 2. feat: 更新 electron 版本
