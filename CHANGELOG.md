@@ -1,11 +1,23 @@
+# v1.1.0
+1. feat: 修改 Dock 及托盘图标，感谢 @22dm 建议及素材：https://github.com/avwo/whistle-client/issues/26
+2. feat: update whistle@2.9.66
 
 # v1.0.9
+1. feat: update whistle@2.9.65
+
 # v1.0.8
+1. feat: update whistle@2.9.64
+
 # v1.0.7
+1. feat: update whistle@2.9.63
+
 # v1.0.6
+1. feat: update whistle@2.9.61
+
 # v1.0.5
 # v1.0.4
-1. feat: update whistle
+1. feat: update whistle@2.9.60
+
 # v1.0.3
 1. feat: 更新 Whistle 版本 [v2.9.59](https://github.com/avwo/whistle/blob/master/CHANGELOG.md#v2959)
 2. feat: 更新 electron 版本
