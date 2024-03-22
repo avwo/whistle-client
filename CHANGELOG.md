@@ -1,3 +1,7 @@
+# v1.1.1
+1. feat: 修改 Mac 客户端桌面图标
+2. feat: update whistle@2.9.67
+
 # v1.1.0
 1. feat: 修改 Dock 及托盘图标，感谢 @22dm 建议及素材：https://github.com/avwo/whistle-client/issues/26
 2. feat: update whistle@2.9.66
