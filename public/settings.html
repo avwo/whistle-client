@@ -29,7 +29,7 @@
         margin: 0 auto;
       }
       ul {
-        height: 380px;
+        height: 340px;
         padding: 20px 20px 0 20px;
         margin: 0;
       }
@@ -64,7 +64,7 @@
       .advanced-button button:hover {
         color: #23527c;
       }
-      ul input, ul textarea, ul select {
+      ul input, ul textarea {
         border: 1px solid #ccc;
         border-radius: 3px;
         padding: 0 5px;
@@ -173,11 +173,6 @@
       .use-default-storage input {
         width: auto;
       }
-      .use-default-storage select {
-        width: 163px!important;
-        vertical-align: middle;
-        padding: 5px;
-      }
     </style>
   </head>
   <body style="overscroll-behavior-x: none;">
@@ -223,21 +218,6 @@
             <span></span>
             <input id="useDefaultStorage" type="checkbox" />
             <em>Use whistle's default storage directory</em>
-          </label>
-        </li>
-        <li class="use-default-storage">
-          <label class="vertial-align">
-            <span></span>
-            <em>--max-http-header-size=</em>
-            <select id="maxHttpHeaderSize">
-              <option value="256" selected>256k</option>
-              <option value="512">512k</option>
-              <option value="1024">1m</option>
-              <option value="5120">5m</option>
-              <option value="10240">10m</option>
-              <option value="51200">50m</option>
-              <option value="102400">100m</option>
-            </select>
           </label>
         </li>
       </ul>
@@ -338,7 +318,6 @@
           $('#bypass').value = options.bypass;
           $('#autoSetProxy').checked = options.autoSetProxy !== false;
           $('#useDefaultStorage').checked = options.useDefaultStorage;
-          $('#maxHttpHeaderSize').value = options.maxHttpHeaderSize || 256;
           if (options.socksPort || options.host || options.username || options.password) {
             showAdvanced();
           }
@@ -389,7 +368,6 @@
           bypass: $('#bypass').value.trim(),
           autoSetProxy: $('#autoSetProxy').checked,
           useDefaultStorage: $('#useDefaultStorage').checked,
-          maxHttpHeaderSize: $('#maxHttpHeaderSize').value,
         });
       });
     </script>
