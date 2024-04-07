@@ -1,3 +1,8 @@
+2. feat: update whistle@2.9.66
+
+# v1.1.2
+1. feat: update whistle@2.9.68
+
 # v1.1.1
 1. feat: 修改 Mac 客户端桌面图标
 2. feat: update whistle@2.9.67
