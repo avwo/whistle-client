@@ -1,4 +1,6 @@
-2. feat: update whistle@2.9.66
+# v1.1.3
+1. feat: update whistle@2.9.69
+2. feat: 支持通过伪协议 `whistle://client?dataUrl=xxx` 导入数据
 
 # v1.1.2
 1. feat: update whistle@2.9.68
