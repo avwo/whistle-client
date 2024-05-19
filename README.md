@@ -14,7 +14,7 @@ Whistle 客户端是基于 [Whistle (命令行版本)](https://github.com/avwo/w
 
 # 安装或更新
 
-Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux、 Docker、服务端等其它环境使用，可以用命令行版本：https://github.com/avwo/whistle。
+Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux、 Docker、服务端等其它环境使用，可以用命令行版本：[https://github.com/avwo/whistle](https://github.com/avwo/whistle)。
 
 安装和更新的方法是一样的，下面以安装过程为例：
 
