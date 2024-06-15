@@ -1,3 +1,6 @@
+# v1.1.8
+1. feat: update whistle@2.9.74
+
 # v1.1.7
 1. feat: update whistle@2.9.73
 
