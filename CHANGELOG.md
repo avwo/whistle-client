@@ -1,3 +1,7 @@
+# v1.2.0
+1. feat: update whistle@2.9.77
+2. feat: add find bar
+
 # v1.1.10
 1. feat: update whistle@2.9.76
 
