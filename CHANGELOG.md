@@ -1,3 +1,8 @@
+# v1.2.1
+1. feat: update whistle@2.9.78
+2. feat: update find-bar@0.91.1
+3. feat: disableUIAuth
+
 # v1.2.0
 1. feat: update whistle@2.9.77
 2. feat: add find bar

@@ -16,11 +16,6 @@
         background-color: #fff;
         overflow: hidden;
       }
-      @media (prefers-color-scheme: dark) {
-        html {
-          filter: invert(1) hue-rotate(-180deg);
-        }
-      }
       * {
         box-sizing: border-box;
       }
@@ -177,6 +172,35 @@
         width: 163px!important;
         vertical-align: middle;
         padding: 5px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html, body, .advanced-button button {
+          background: #1f1f1f;
+          color: #e3e3e3;
+          color-scheme: dark !important;
+        }
+        .advanced-button button {
+          color: #aec6f6;
+        }
+        .advanced-button button:hover {
+          color: #86abf2;
+        }
+        .proxy-port::before {
+          color: #ec5d4e;
+        }
+        .btn-primary {
+          color: #e3e3e3;
+          background-color: #2f6cbb;
+          border-color: #4180d1;
+          margin-left: 15px;
+        }
+        .btn-default {
+          color: #333;
+          background-color: #313131;
+          border-color: #404040;
+          color: #e3e3e3;
+        }
       }
     </style>
   </head>
