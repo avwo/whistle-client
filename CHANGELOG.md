@@ -1,3 +1,6 @@
+# v1.2.2
+1. feat: update whistle@2.9.79
+
 # v1.2.1
 1. feat: update whistle@2.9.78
 2. feat: update find-bar@0.91.1
