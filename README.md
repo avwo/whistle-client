@@ -2,7 +2,7 @@
 Whistle 客户端是基于 [Whistle (命令行版本)](https://github.com/avwo/whistle) + [Electron](https://github.com/electron/electron) 开发的支持 Mac 和 Windows 的客户端，它不仅保留了命令行版本的除命令行以外的所有功能，且新增以下功能代替复杂的命令行操作，让用户使用门槛更低、操作更简单：
 
 1. 无需安装 Node，客户端下载安装后即可使用
-2. 打开客户端自动设置系统代理（可以通过下面的 `Proxy Settings` 关闭该功能）
+2. 打开客户端自动设置系统代理（可以通过下面的 `Proxy Settings` 关闭该功能，`v1.2.4` 版本开始默认不自动设置系统代理）
 3. 通过界面手动开启或关闭系统代理（相当于命令行命令 `w2 proxy port` 或 `w2 proxy 0`）
 4. 通过界面设置系统代理白名单（相当于命令行命令 `w2 proxy port -x domains`）
 5. 通过界面修改代理的端口（客户端默认端口为 `8888`）
@@ -25,6 +25,10 @@ Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux�
 2. 打开安装包可能会弹出以下对话框，点击 `是` 、`确定`、`允许访问` 按钮即可
 
    <img width="360" alt="image" src="https://github.com/avwo/whistle/assets/11450939/1b496557-6d3e-4966-a8a4-bd16ed643e28">
+
+   <img width="500" alt="image" src="https://github.com/user-attachments/assets/57afaf41-3d5c-4d74-b0bf-415d4e2c1f27">
+
+   <img width="500" alt="image" src="https://github.com/user-attachments/assets/8ca1f00f-2a8a-49f2-8d14-2118fe471137">
 
    <img src="https://github.com/avwo/whistle/assets/11450939/d44961bb-db5b-4ce3-ab02-56879f90f3b0" width="360" />
 
