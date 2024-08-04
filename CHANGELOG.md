@@ -1,3 +1,8 @@
+# v1.2.4
+1. feat: update whistle@2.9.81
+2. feat: 提供无需管理员权限的 Windows 安装包（`Whistle (User Installer)-vx.y.x-win-x64.exe`）
+3. feat: 支持自定义安装目录
+
 # v1.2.3
 1. feat: update whistle@2.9.80
 

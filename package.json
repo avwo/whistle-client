@@ -1,6 +1,6 @@
 {
   "name": "Whistle",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Whistle Web Debugging Proxy",
   "main": "./lib/index.js",
   "author": "avenwu <avwu@qq.com>",
@@ -52,9 +52,10 @@
       "target": "nsis"
     },
     "nsis": {
-      "oneClick": true,
+      "oneClick": false,
       "perMachine": true,
       "runAfterFinish": true,
+      "allowToChangeInstallationDirectory": true,
       "include": "installer.nsh"
     }
   },
@@ -74,7 +75,7 @@
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
     "sudo-prompt": "^9.2.1",
-    "whistle": "^2.9.80",
+    "whistle": "^2.9.81",
     "whistle.proxyauth": "^1.1.2"
   }
 }
