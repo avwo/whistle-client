@@ -21,7 +21,7 @@ Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux�
 #### Windows
 
 1. 下载名为 [Whistle-v版本号-win-x64.exe](https://github.com/avwo/whistle-client/releases) 最新版本号的安装包
-   > 没有管理员权限的用户可以下载 [Whistle (User Installer)-v版本号-win-x64.exe](https://github.com/avwo/whistle-client/releases) 用户版本安装包，跟默认版本的区别是 **User installer** 不支持伪协议（`whistle://client`）
+   > 没有管理员权限的用户可以下载 [Whistle-user-installer-v版本号-win-x64.exe](https://github.com/avwo/whistle-client/releases) 用户版本安装包，跟默认版本的区别是 **User Installer** 不支持伪协议（`whistle://client`）
 
 2. 打开安装包可能会弹出以下对话框，点击 `是` 、`确定`、`允许访问` 按钮即可
 
