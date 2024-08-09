@@ -360,7 +360,7 @@
           $('#password').value = options.password;
           $('#host').value = options.host;
           $('#bypass').value = options.bypass;
-          $('#autoSetProxy').checked = options.autoSetProxy !== false;
+          $('#autoSetProxy').checked = !!options.autoSetProxy;
           $('#useDefaultStorage').checked = options.useDefaultStorage;
           $('#maxHttpHeaderSize').value = options.maxHttpHeaderSize || 256;
           if (options.socksPort || options.host || options.username || options.password) {
