@@ -1,7 +1,11 @@
-# v1.2.6
+# v1.2.9
+1. feat: update whistle@2.9.86
+2. feat: update whistle.proxyauth@1.1.5
+
+# v1.2.8
 1. feat: update whistle@2.9.85
 
-# v1.2.6
+# v1.2.7
 1. feat: update whistle@2.9.84
 
 # v1.2.6
