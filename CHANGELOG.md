@@ -1,5 +1,9 @@
+# v1.2.13
+1. feat: update whistle@2.9.91
+
 # v1.2.12
-1. feat: update whistle@2.9.89
+1. feat: update whistle@2.9.90
+2. feat: 支持搜索 Rules & Values 的编辑器内容
 
 # v1.2.11
 1. feat: update whistle@2.9.88
