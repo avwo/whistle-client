@@ -93,11 +93,12 @@
       }
       .footer {
         width: 460px;
-        padding: 10px 20px 0;
+        padding: 5px 20px 0;
         border-top: 1px solid #ddd;
         margin: auto;
-        text-align: right;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
       }
       .btn {
         display: inline-block;
@@ -154,9 +155,13 @@
         display: inline-block;
         text-align: left;
       }
-      .auto-set {
-        white-space: nowrap;
+      .quick-set {
         margin-right: 45px;
+        text-align: left;
+        flex: 1;
+      }
+      .vertial-align {
+        white-space: nowrap;
       }
       .vertial-align input, .vertial-align em {
         vertical-align: middle;
@@ -266,10 +271,17 @@
         </li>
       </ul>
       <div class="footer">
-        <label class="vertial-align auto-set">
-          <input id="autoSetProxy" type="checkbox" />
-          <em>Set as system proxy at startup</em>
-        </label>
+        <div class="quick-set">
+          <label class="vertial-align">
+            <input id="autoSetProxy" type="checkbox" />
+            <em>Set as system proxy at startup</em>
+          </label>
+          <br />
+          <label class="vertial-align">
+            <input id="startAtLogin" type="checkbox" />
+            <em>Start at login</em>
+          </label>
+        </div>
         <button id="cancel" class="btn btn-default">Cancel</button>
         <button id="apply" class="btn btn-primary">Apply</button>
       </div>
@@ -361,6 +373,7 @@
           $('#host').value = options.host;
           $('#bypass').value = options.bypass;
           $('#autoSetProxy').checked = !!options.autoSetProxy;
+          $('#startAtLogin').checked = !!options.startAtLogin;
           $('#useDefaultStorage').checked = options.useDefaultStorage;
           $('#maxHttpHeaderSize').value = options.maxHttpHeaderSize || 256;
           if (options.socksPort || options.host || options.username || options.password) {
@@ -376,6 +389,9 @@
       };
       on('#autoSetProxy', 'change', () => {
         sendMsg('autoSetProxy',  $('#autoSetProxy').checked);
+      });
+      on('#startAtLogin', 'change', () => {
+        sendMsg('startAtLogin',  $('#startAtLogin').checked);
       });
       on('#apply', 'click', function() {
         const port = $('#port').value.trim();
@@ -412,6 +428,7 @@
           password,
           bypass: $('#bypass').value.trim(),
           autoSetProxy: $('#autoSetProxy').checked,
+          startAtLogin: $('#startAtLogin').checked,
           useDefaultStorage: $('#useDefaultStorage').checked,
           maxHttpHeaderSize: $('#maxHttpHeaderSize').value,
         });
