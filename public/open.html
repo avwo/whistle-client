@@ -31,30 +31,6 @@
     </style>
   </head>
   <body style="overscroll-behavior-x: none;">
-    <a id="clientUrl" href="whistle://client">Open Whistle Client</a>
-    <p>
-      <a href="/cgi-bin/rootca">Download RootCA</a>
-    </p>
-    <script>
-      var IMPORT_URL_RE = /[?&#]data(?:_url|Url)=([^&#]+)(?:&|#|$)/;
-      function getDataUrl() {
-        var result = IMPORT_URL_RE.exec(location.href);
-        return result && result[1];
-      }
-      function isHttp(url) {
-        try {
-          url = decodeURIComponent(url).trim();
-          return /https?:\/\/\S/.test(url);
-        } catch (e) {}
-      }
-      var url = getDataUrl();
-      if (isHttp(url)) {
-        url = 'whistle://client?dataUrl=' + url;
-        location.href = url;
-        document.querySelector('#clientUrl').href = url;
-      } else {
-        location.href = 'whistle://client';
-      }
-    </script>
+    <a href="/cgi-bin/rootca">Download RootCA</a>
   </body>
 </html>
