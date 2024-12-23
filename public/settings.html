@@ -96,8 +96,10 @@
         padding: 10px 20px 0;
         border-top: 1px solid #ddd;
         margin: auto;
-        text-align: right;
         white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: right;
       }
       .btn {
         display: inline-block;
@@ -154,9 +156,8 @@
         display: inline-block;
         text-align: left;
       }
-      .auto-set {
+      .vertial-align {
         white-space: nowrap;
-        margin-right: 45px;
       }
       .vertial-align input, .vertial-align em {
         vertical-align: middle;
@@ -266,10 +267,6 @@
         </li>
       </ul>
       <div class="footer">
-        <label class="vertial-align auto-set">
-          <input id="autoSetProxy" type="checkbox" />
-          <em>Set as system proxy at startup</em>
-        </label>
         <button id="cancel" class="btn btn-default">Cancel</button>
         <button id="apply" class="btn btn-primary">Apply</button>
       </div>
@@ -360,7 +357,6 @@
           $('#password').value = options.password;
           $('#host').value = options.host;
           $('#bypass').value = options.bypass;
-          $('#autoSetProxy').checked = !!options.autoSetProxy;
           $('#useDefaultStorage').checked = options.useDefaultStorage;
           $('#maxHttpHeaderSize').value = options.maxHttpHeaderSize || 256;
           if (options.socksPort || options.host || options.username || options.password) {
@@ -374,9 +370,6 @@
         selector.select();
         selector.focus();
       };
-      on('#autoSetProxy', 'change', () => {
-        sendMsg('autoSetProxy',  $('#autoSetProxy').checked);
-      });
       on('#apply', 'click', function() {
         const port = $('#port').value.trim();
         if (port && !isPort(port)) {
@@ -411,7 +404,6 @@
           username,
           password,
           bypass: $('#bypass').value.trim(),
-          autoSetProxy: $('#autoSetProxy').checked,
           useDefaultStorage: $('#useDefaultStorage').checked,
           maxHttpHeaderSize: $('#maxHttpHeaderSize').value,
         });

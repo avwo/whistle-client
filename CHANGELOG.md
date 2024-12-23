@@ -1,3 +1,7 @@
+# v1.3.0
+1. feat: 左上角 Whistle 菜单添加开机自动启动选项（默认关闭）
+2. feat: update whistle@2.9.92
+
 # v1.2.13
 1. feat: update whistle@2.9.91
 
