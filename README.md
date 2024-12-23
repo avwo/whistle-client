@@ -70,6 +70,7 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
    - Install Root CA
    - Check Update
    - Set As System Proxy
+   - Start At Login
    - Restart
    - Quit
 2. 安装插件
@@ -77,11 +78,19 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 
 ## 顶部菜单
 
-<img width="390" alt="image" src="https://github.com/avwo/whistle/assets/11450939/6de659d6-9f81-4ff2-89f1-504c785b55dd">
+<img width="275" alt="image" src="https://github.com/user-attachments/assets/96c5d3fb-a423-4cfe-8a85-8bd63258fcfb" />
+
+1. `Proxy Settings`：见下方 Proxy Settings
+2. `Install Root CA`：安装根证书
+3. `Check Update`：查看是否有新版本
+4. `Set As System Proxy`：设置系统代理
+5. `Start At Login`：是否开机自动启动 Whistle 客户端
+6. `Restart`：重启客户端
+7. `Quit`：退出客户端
 
 #### Proxy Settings
 
-<img width="470" alt="image" src="https://github.com/avwo/whistle/assets/11450939/c7a54333-2daf-4231-9cd2-4c75ffa49be0">
+<img width="470" alt="Proxy Settings" src="https://github.com/user-attachments/assets/0ca0f123-96ff-41d7-8acf-7b3468d92605">
 
 1. `Proxy Port`：必填项，代理端口，默认为 `8888`
 2. `Socks Port`：新增 Socksv5 代理端口
@@ -92,7 +101,6 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
    - 域名：`www.test.com`
    - 通配符：`*.test.com`（这包含 `test.com` 的所有子代域名）
 6. `Use whistle's default storage directory`：存储是否切回命令行版本的目录，这样可以保留之前的配置数据（勾选后要停掉命令行版本，否则配置可能相互覆盖）
-7. `Set system proxy at startup`：是否在启动时自动设置系统代理
 
 #### Install Root CA
 
@@ -161,9 +169,7 @@ whistle.script whistle.vase --registry=https://registry.npmmirror.com
 #### 3. 如何同步之前的数据？
 Whistle 客户端默认使用独立的目录，如果要复用之前命令行版本的目录，可以通过  `Proxy Settings` 的 `Use whistle's default storage directory` 切回命令行的默认目录：
 
-<img width="360" alt="image" src="https://github.com/avwo/whistle/assets/11450939/5ac91087-f6d9-4ede-8ecd-aa753a8ebde5">
-
-
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/ef6805d0-e05e-48bf-adbc-88677fd22b0c" />
 
 > 要确保同一目录只有一个实例，否则会导致配置相互覆盖
 
