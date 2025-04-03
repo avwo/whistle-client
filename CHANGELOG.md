@@ -1,5 +1,6 @@
 # v1.3.3
 1. feat: update whistle@2.9.95
+2. feat: 添加快捷键 https://github.com/avwo/whistle-client/pull/80
 
 # v1.3.2
 1. feat: update whistle@2.9.94
