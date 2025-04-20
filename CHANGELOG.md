@@ -1,3 +1,7 @@
+# v1.3.5
+1. feat: update whistle@2.9.97
+2. feat: support cidr
+
 # v1.3.4
 1. feat: update whistle@2.9.96
 2. fix: https://github.com/avwo/whistle-client/issues/16
