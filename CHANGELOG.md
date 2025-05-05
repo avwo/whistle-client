@@ -1,3 +1,6 @@
+# v1.3.6
+1. feat: update whistle@2.9.98
+
 # v1.3.5
 1. feat: update whistle@2.9.97
 2. feat: support cidr
