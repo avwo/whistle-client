@@ -1,3 +1,8 @@
+# v1.3.7
+1. feat: update whistle@2.9.99
+2. feat: add linux client
+3. feat: 修改客户端 user-agent
+
 # v1.3.6
 1. feat: update whistle@2.9.98
 
