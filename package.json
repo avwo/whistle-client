@@ -6,10 +6,10 @@
   "author": "avenwu <avwu@qq.com>",
   "scripts": {
     "build:win": "electron-builder --win --x64",
-    "build:mac": "electron-builder --mac",
+    "build:mac": "electron-builder --mac --linux",
     "build:linux": "electron-builder --linux",
     "release:win": "electron-builder --win --x64 -p always",
-    "release:mac": "electron-builder --mac -p always",
+    "release:mac": "electron-builder --mac --linux -p always",
     "release:linux": "electron-builder --linux -p always",
     "lint": "eslint --fix lib",
     "lintfix": "npm run lint",
