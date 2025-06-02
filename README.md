@@ -14,9 +14,7 @@ Whistle 客户端是基于 [Whistle (命令行版本)](https://github.com/avwo/w
 
 # 安装或更新
 
-Whistle 客户端目前只支持 Mac 和 Windows 系统，如果需要在 Linux、 Docker、服务端等其它环境使用，可以用命令行版本：[https://github.com/avwo/whistle](https://github.com/avwo/whistle)。
-
-安装和更新的方法是一样的，下面以安装过程为例：
+Whistle 客户端目前支持 Mac、 Windows、Linux 系统，如果需要在 Linux、 Docker 等服务端版本可以用命令行版本：[https://github.com/avwo/whistle](https://github.com/avwo/whistle)。
 
 #### Windows
 
@@ -62,6 +60,17 @@ Mac 有 Intel 和 M1 两种芯片类型，不同类型芯片需要下载不同�
 <img width="1080" alt="image" src="https://github.com/avwo/whistle/assets/11450939/d641af14-f933-4b8a-af45-8c69c648b799">
 
 > 一些公司的软件可能会把客户端里面引用的设置代理的 whistle 文件误认为问题软件，直接点击允许放过即可，如果还有问题可以跟公司的安全同事沟通下给软件加白
+
+
+
+#### Linux
+
+目前支持 Ubuntu 和 Fedora 系统，根据 CPU 类型自行选择安装包：
+
+1. Intel/AMD 64位（x86_64）：[Whistle-v版本号-linux-x86_64.AppImage](https://github.com/avwo/whistle-client/releases) 
+2. ARM 64位（arm64）：[Whistle-v版本号-linux-arm64.AppImage](https://github.com/avwo/whistle-client/releases) 
+
+安装方法参考：https://zhuanlan.zhihu.com/p/517734580
 
 # 基本用法
 
