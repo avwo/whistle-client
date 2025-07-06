@@ -7,6 +7,8 @@
 2. Windows
 3. Linux (Fedora/Ubuntu)
 
+> If the system you are using does not support the Whistle Client (such as a server without a graphical interface or a special device), you can use the Whistle: https://github.com/avwo/whistle
+
 # Installation
 Please select the corresponding installation steps according to your operating system.
 

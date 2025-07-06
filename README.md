@@ -7,6 +7,8 @@
 2. Windows
 3. Linux (Fedora/Ubuntu)
 
+> 如果您使用的系统不支持 Whistle Client（如无图形界面的服务器或特殊设备），可以用 Whistle：https://github.com/avwo/whistle
+
 # 安装
 请根据你的操作系统选择对应的安装步骤。
 
