@@ -7,6 +7,8 @@
 2. Windows
 3. Linux (Fedora/Ubuntu)
 
+> If the system you are using does not support the Whistle Client (such as a server without a graphical interface or a special device), you can use the Whistle: https://github.com/avwo/whistle
+
 # Installation
 Please select the corresponding installation steps according to your operating system.
 
@@ -145,10 +147,6 @@ After starting, please follow the steps below to complete the necessary initial 
 w2 install whistle.script whistle.inspect
 ```
 
-### Other functions
-
-For more information about Whistle functions, please visit: https://github.com/avwo/whistle
-
 # FAQ
 
 #### 1. Enable the client to set the system proxy. Some applications (such as Outlook, Word, etc.) may have network connection exceptions
@@ -172,6 +170,10 @@ By default, the Whistle client uses an independent storage directory. If you wan
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/ef6805d0-e05e-48bf-adbc-88677fd22b0c" />
 
 > Note: Only a single Whistle instance should access this directory simultaneously. Running multiple instances concurrently will lead to configuration conflicts and data corruption!
+
+# Getting Started
+
+For more information about Whistle functions, please visit: https://wproxy.org/en/docs/getting-started.html
 
 # License
 
