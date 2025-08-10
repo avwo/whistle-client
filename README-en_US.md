@@ -149,7 +149,7 @@ w2 install whistle.script whistle.inspect
 
 ### Other functions
 
-For more information about Whistle functions, please visit: https://github.com/avwo/whistle
+For more information about Whistle functions, please visit: https://wproxy.org/en/docs/getting-started.html
 
 # FAQ
 

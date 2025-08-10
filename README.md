@@ -129,7 +129,7 @@ w2 install --registry=https://registry.npmmirror.com whistle.script whistle.insp
 
 ### 其他功能
 
-Whistle 功能详见：https://github.com/avwo/whistle
+Whistle 功能详见：https://wproxy.org/docs/getting-started.html
 
 # 常见问题
 
