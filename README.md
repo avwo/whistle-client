@@ -127,10 +127,6 @@
 w2 install --registry=https://registry.npmmirror.com whistle.script whistle.inspect
 ```
 
-### 其他功能
-
-Whistle 功能详见：https://wproxy.org/docs/getting-started.html
-
 # 常见问题
 
 #### 1. 启用客户端设置系统代理，部分应用（如 Outlook、Word 等）可能出现网络连接异常
@@ -152,6 +148,10 @@ Whistle 客户端默认使用独立的存储目录，如果要继续用命令行
 <img width="470" alt="image" src="https://github.com/user-attachments/assets/ef6805d0-e05e-48bf-adbc-88677fd22b0c" />
 
 > 注意：请确保同一时间只有一个 Whistle 实例访问该目录，多实例同时运行会造成配置冲突和数据覆盖！
+
+# 快速上手
+
+详细使用指南请参考：https://wproxy.org/docs/getting-started.html
 
 # License
 [MIT](./LICENSE)
