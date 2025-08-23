@@ -1,3 +1,9 @@
+# v1.3.9
+1. feat: update whistle@2.9.101
+
+# v1.3.8
+1. feat: update whistle@2.9.100
+
 # v1.3.7
 1. feat: update whistle@2.9.99
 2. feat: add linux client
