@@ -1,6 +1,6 @@
 {
   "name": "Whistle",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Whistle Web Debugging Proxy",
   "main": "./lib/index.js",
   "author": "avenwu <avwu@qq.com>",
