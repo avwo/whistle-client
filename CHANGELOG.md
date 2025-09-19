@@ -1,5 +1,8 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
+# v1.4.1
+1. fix: https://github.com/avwo/whistle/issues/1253
+
 # v1.4.0
 1. feat: System tray menu now supports switching rules
 2. feat: Update whistle to v2.9.102
