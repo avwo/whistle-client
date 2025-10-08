@@ -1,5 +1,8 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
+# v1.4.2
+1. feat: Update whistle to v2.9.103
+
 # v1.4.1
 1. fix: https://github.com/avwo/whistle-client/issues/74
 
