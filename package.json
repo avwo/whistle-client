@@ -1,6 +1,6 @@
 {
   "name": "Whistle",
-  "version": "1.4.2",
+  "version": "1.5.1",
   "description": "Whistle Web Debugging Proxy",
   "main": "./lib/index.js",
   "author": "avenwu <avwu@qq.com>",
@@ -74,7 +74,7 @@
     }
   },
   "devDependencies": {
-    "electron": "~25.9.8",
+    "electron": "^39.1.2",
     "electron-builder": "^24.4.0",
     "eslint": "^8.45.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -89,7 +89,7 @@
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
     "sudo-prompt": "^9.2.1",
-    "whistle": "^2.9.103",
+    "whistle": "^2.9.105",
     "whistle.proxyauth": "^1.1.5"
   }
 }
