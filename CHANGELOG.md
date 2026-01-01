@@ -1,6 +1,10 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
-# v1.5.1
+# v1.5.3
+1. feat: update whistle to v2.9.107
+2. feat: 优化下拉菜单
+
+# v1.5.2
 1. feat: update whistle to v2.9.106
 
 # v1.5.1
