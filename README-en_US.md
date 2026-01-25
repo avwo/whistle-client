@@ -3,9 +3,9 @@
 [中文](./README.md) · English
 
 [Whistle](https://github.com/avwo/whistle) is a powerful cross-platform network packet capture and debugging tool. This client is the official desktop version and supports the following operating systems:
-1. macOS
-2. Windows
-3. Linux (Fedora/Ubuntu)
+- macOS（Apple Silicon / Intel）
+- Windows
+- Linux（Fedora / Ubuntu）
 
 > If the system you are using does not support the Whistle Client (such as a server without a graphical interface or a special device), you can use the Whistle: https://github.com/avwo/whistle
 
@@ -171,10 +171,11 @@ By default, the Whistle client uses an independent storage directory. If you wan
 
 > Note: Only a single Whistle instance should access this directory simultaneously. Running multiple instances concurrently will lead to configuration conflicts and data corruption!
 
-# Getting Started
+# Quick Start
 
-For more information about Whistle functions, please visit: https://wproxy.org/en/docs/getting-started.html
+See the official guide for usage and examples: https://wproxy.org/docs/getting-started.html
 
 # License
 
-[MIT](./LICENSE)
+[MIT — see the LICENSE file](./LICENSE)
+
