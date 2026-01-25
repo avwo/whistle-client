@@ -2,12 +2,12 @@
 
 中文 · [English](./README-en_US.md)
 
-[Whistle](https://github.com/avwo/whistle) 是一款功能强大的跨平台网络抓包调试工具，本客户端为官方桌面版本，支持以下操作系统：
-1. macOS
-2. Windows
-3. Linux (Fedora/Ubuntu)
+[Whistle](https://github.com/avwo/whistle) 是一款强大的跨平台网络抓包与调试工具。本仓库为官方桌面客户端，支持系统：
+- macOS（Apple Silicon / Intel）
+- Windows
+- Linux（Fedora / Ubuntu）
 
-> 如果您使用的系统不支持 Whistle Client（如无图形界面的服务器或特殊设备），可以用 Whistle：https://github.com/avwo/whistle
+> 若在无图形界面的服务器或特殊设备上使用，请改用命令行版 Whistle：https://github.com/avwo/whistle
 
 # 安装
 请根据你的操作系统选择对应的安装步骤。
@@ -151,7 +151,8 @@ Whistle 客户端默认使用独立的存储目录，如果要继续用命令行
 
 # 快速上手
 
-详细使用指南请参考：https://wproxy.org/docs/getting-started.html
+详细使用指南与示例请查看官方文档：https://wproxy.org/docs/getting-started.html
 
 # License
-[MIT](./LICENSE)
+
+[MIT（详见 LICENSE 文件）](./LICENSE)
