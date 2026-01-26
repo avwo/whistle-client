@@ -1,5 +1,9 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
+# v1.5.5
+1. feat: update whistle to v2.9.109
+2. feat: add `Hide From Dock` menu
+
 # v1.5.4
 1. feat: update whistle to v2.9.108
 2. feat: supports viewing the client version number

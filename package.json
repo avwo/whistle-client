@@ -1,6 +1,6 @@
 {
   "name": "Whistle",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Whistle Web Debugging Proxy",
   "main": "./lib/index.js",
   "author": "avenwu <avwu@qq.com>",
@@ -41,6 +41,9 @@
     ],
     "mac": {
       "icon": "public/dock.png",
+      "extendInfo": {
+        "LSUIElement": true
+      },
       "target": {
         "target": "dmg",
         "arch": [
@@ -89,7 +92,7 @@
     "fs-extra": "^11.1.1",
     "npminstall": "^7.9.0",
     "sudo-prompt": "^9.2.1",
-    "whistle": "^2.9.108",
+    "whistle": "^2.9.109",
     "whistle.proxyauth": "^1.1.5"
   }
 }
