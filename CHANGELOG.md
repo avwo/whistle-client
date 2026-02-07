@@ -1,5 +1,10 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
+# v1.6.0
+1. feat: update whistle to v2.10.0
+2. feat: https://github.com/avwo/whistle-client/issues/106
+3. feat: add `Reject unauthorized HTTPS requests` option in Proxy Settings
+
 # v1.5.5
 1. feat: update whistle to v2.9.109
 2. feat: add `Hide From Dock` menu
