@@ -47,7 +47,7 @@
         margin: 0 auto;
       }
       ul {
-        height: 380px;
+        height: 415px;
         padding: 20px 20px 0 20px;
         margin: 0;
       }
@@ -186,13 +186,13 @@
         vertical-align: middle;
         font-style: normal;
       }
-      .use-default-storage {
+      .form-item {
         margin-top: -5px;
       }
-      .use-default-storage input {
+      .form-item input {
         width: auto;
       }
-      .use-default-storage select {
+      .form-item select {
         width: 163px!important;
         vertical-align: middle;
         padding: 5px;
@@ -237,14 +237,21 @@
             <textarea id="bypass" maxlength="2000" placeholder="Servers for which you do not want to use any proxy (separated by spaces)"></textarea>
           </label>
         </li>
-        <li class="use-default-storage">
+        <li class="form-item">
           <label class="vertial-align">
             <span></span>
             <input id="useDefaultStorage" type="checkbox" />
             <em>Use whistle's default storage directory</em>
           </label>
         </li>
-        <li class="use-default-storage">
+        <li class="form-item">
+          <label class="vertial-align">
+            <span></span>
+            <input id="rejectUnauthorized" type="checkbox" />
+            <em>Reject unauthorized HTTPS requests</em>
+          </label>
+        </li>
+        <li class="form-item">
           <label class="vertial-align">
             <span></span>
             <em>--max-http-header-size=</em>
@@ -270,6 +277,7 @@
     </div>
     <script>
       const { ipcRenderer } = require('electron');
+      const MAX_LEN = 16;
       function $(selector, all) {
         if (typeof selector !== 'string') {
           return selector;
@@ -288,7 +296,11 @@
 
       function on(selector, type, l) {
         forEach(selector, function(elem) {
-          elem.addEventListener(type, l);
+          if (Array.isArray(type)) {
+            type.forEach(t => elem.addEventListener(t, l));
+          } else {
+            elem.addEventListener(type, l);
+          }
         });
       }
 
@@ -348,14 +360,16 @@
           $('#port').value = options.port;
           $('#socksPort').value = options.socksPort;
           $('#username').value = options.username;
-          $('#password').value = options.password;
+          pwdInput.value = options.password;
           $('#host').value = options.host;
           $('#bypass').value = options.bypass;
           $('#useDefaultStorage').checked = options.useDefaultStorage;
+          $('#rejectUnauthorized').checked = options.rejectUnauthorized;
           $('#maxHttpHeaderSize').value = options.maxHttpHeaderSize || 256;
           if (options.socksPort || options.host || options.username || options.password) {
             showAdvanced();
           }
+          handlePwdInput(true);
         }
         foucsInput('#port');
       });
@@ -364,6 +378,28 @@
         selector.select();
         selector.focus();
       };
+      const pwdInput = $('#password');
+      const handlePwdInput = function (init) {
+        if (pwdInput.value.length > MAX_LEN) {
+          if (init !== true) {
+            pwdInput.value = '';
+          }
+          pwdInput.type = 'password';
+        } else {
+          pwdInput.type = 'text';
+        }
+      };
+
+      on(pwdInput, ['focus', 'click'], function() {
+        if (pwdInput.type !== 'password') {
+          return;
+        }
+        foucsInput(pwdInput);
+        setTimeout(function() {
+          foucsInput(pwdInput);
+        }, 0);
+      });
+      on(pwdInput, 'input', handlePwdInput);
       on('#apply', 'click', function() {
         const port = $('#port').value.trim();
         if (port && !isPort(port)) {
@@ -385,7 +421,7 @@
           foucsInput('#username');
           return showToast('Username cannot have spaces');
         }
-        const password  = $('#password').value.trim();
+        const password  = pwdInput.value.trim();
         if (/\s/.test(password)) {
           foucsInput('#password');
           return showToast('Password cannot have spaces');
@@ -399,6 +435,7 @@
           password,
           bypass: $('#bypass').value.trim(),
           useDefaultStorage: $('#useDefaultStorage').checked,
+          rejectUnauthorized: $('#rejectUnauthorized').checked,
           maxHttpHeaderSize: $('#maxHttpHeaderSize').value,
         });
       });
