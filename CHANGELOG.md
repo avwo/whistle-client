@@ -1,5 +1,11 @@
 > Get the latest release: https://github.com/avwo/whistle-client/releases
 
+# v1.6.4
+1. fix: https://github.com/avwo/whistle-client/issues/124
+
+# v1.6.3
+1. feat: update whistle to v2.10.3
+
 # v1.6.2
 1. feat: update whistle to v2.10.2
 2. feat: update electron to v41.0.3
