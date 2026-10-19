@@ -89,7 +89,7 @@ After installation, please start it in the following way:
 After starting, please follow the steps below to complete the necessary initial settings (must be done when running for the first time):
 1. Open the `Whistle` menu item at the top of the client
 2. Click `Install Root CA`: Install the system root certificate for parsing HTTPS Request
-3. Enable `Set As System Proxy`: Set the system proxy to capture the system's web requests
+3. Enable `Set as System Proxy`: Set the system proxy to capture the system's web requests
 
 ### Top menu
 
@@ -98,8 +98,8 @@ After starting, please follow the steps below to complete the necessary initial 
 1. `Proxy Settings`: See Proxy Settings below
 2. `Install Root CA`: Install the root certificate
 3. `Check Update`: Check if there is a new version
-4. `Set As System Proxy`: Set the system proxy
-5. `Start At Login`: Whether to automatically start the Whistle client at startup
+4. `Set as System Proxy`: Set the system proxy
+5. `Start at Login`: Whether to automatically start the Whistle client at startup
 6. `Restart`: Restart the client
 7. `Quit`: Exit the client
 
