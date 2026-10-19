@@ -81,7 +81,7 @@
 启动后，请按以下步骤完成必要的初始设置（首次运行时必做）：
 1. 打开客户端顶部 `Whistle` 菜单项
 2. 点击 `Install Root CA`：安装系统根证书，用于解析 HTTPS 请求
-3. 开启 `Set As System Proxy`：设置系统代理，用于捕获系统的 Web 请求
+3. 开启 `Set as System Proxy`：设置系统代理，用于捕获系统的 Web 请求
 
 ### 顶部菜单
 
@@ -90,8 +90,8 @@
 1. `Proxy Settings`：见下方 Proxy Settings
 2. `Install Root CA`：安装根证书
 3. `Check Update`：查看是否有新版本
-4. `Set As System Proxy`：设置系统代理
-5. `Start At Login`：是否开机自动启动 Whistle 客户端
+4. `Set as System Proxy`：设置系统代理
+5. `Start at Login`：是否开机自动启动 Whistle 客户端
 6. `Restart`：重启客户端
 7. `Quit`：退出客户端
 
