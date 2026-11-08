@@ -55,14 +55,8 @@
         var result = IMPORT_URL_RE.exec(location.href);
         return result && result[1];
       }
-      function isHttp(url) {
-        try {
-          url = decodeURIComponent(url).trim();
-          return /https?:\/\/\S/.test(url);
-        } catch (e) {}
-      }
       var url = getDataUrl();
-      if (isHttp(url)) {
+      if (url) {
         url = 'whistle://client?dataUrl=' + url;
         location.href = url;
         document.querySelector('#clientUrl').href = url;
